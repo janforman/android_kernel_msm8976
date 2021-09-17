@@ -109,7 +109,7 @@ static int sockev_client_cb(struct notifier_block *nb,
 
 	nlmsg_notify(socknlmsgsk, skb, 0, SKNLGRP_SOCKEV, 0, GFP_KERNEL);
 done:
-    sock_put(sk);
+	sock_put(sk);
 sk_null:
 	return 0;
 }
